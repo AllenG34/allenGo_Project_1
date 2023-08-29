@@ -1,0 +1,102 @@
+@import '_btnConfig';
+@import '_utilities';
+@import '_config';
+
+// Mixins
+@mixin border($width, $color) {
+  border: $width solid $color;
+}
+
+// Nested Selectors
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: $primary-color;
+  font-size: 40px;
+  font-family: $font-family;
+  text-transform: uppercase;
+}
+
+body {
+  background-color: $box-bg;
+  margin: auto;
+  width: 20%;
+  text-align: center;
+  background-image: $box-bg-image;
+  background-size: cover;
+}
+
+.box {
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  
+  .square {
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 120px;
+    
+    @include border(5px, rgb(250, 247, 247));
+  }
+}
+
+.container {
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reset {
+  background-color: $reset-bg;
+  color: $reset-bg;
+  font-size: $reset-font-size;
+  padding: $reset-padding;
+  border-radius: $reset-border-radius;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#results {
+  font-size: 100px;
+  color: $secondary-color;
+}
+
+:root {
+  --winning-blocks: $winning-block;
+}
+
+// Media Query
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 30px;
+    padding-top: 50px;
+  }
+  
+  #results {
+    font-size: 30px;
+  }
+
+  .square {
+    font-size: 60px;
+    width: 150px;
+    height: 110px;
+  }
+}
+
+// error handling 
+@if $primary-color == null {
+  @warn 'warning: $primary-color variable is not defined'
+}

@@ -1,0 +1,25 @@
+@import "utilities";
+@import "config";
+
+%btn {
+    background-color: rgb(87, 7, 7);
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.btn-primary {
+    @extend %btn;
+    @include set-bg(lighten($primary-color, 10%));
+  }
+  
+  .btn-secondary {
+    @extend %btn;
+    @include set-bg($secondary-color);
+  }
+  

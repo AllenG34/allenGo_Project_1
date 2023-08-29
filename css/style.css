@@ -1,0 +1,85 @@
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: rgb(8, 8, 8);
+  font-size: 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+body {
+  background-color: aquamarine;
+  margin: auto;
+  width: 20%;
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1566228015668-4c45dbc4e2f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGJyaWdodCUyMGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+  background-size: cover;
+}
+
+.box {
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.box .square {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120px;
+  border: 5px solid rgb(250, 247, 247);
+}
+
+.container {
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reset {
+  background-color: rgb(87, 7, 7);
+  color: white;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
+.reset:hover {
+  cursor: pointer;
+}
+
+#results {
+  font-size: 100px;
+  color: rgb(77, 240, 77);
+}
+
+:root {
+  --winning-blocks: pink ;
+}
+
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 30px;
+    padding-top: 50px;
+  }
+  #results {
+    font-size: 30px;
+  }
+  .square {
+    font-size: 60px;
+    width: 150px;
+    height: 110px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
